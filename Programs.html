@@ -34,8 +34,6 @@
   <div class="about-container">
     <h1>OUR PROGRAMS</h1>
   </div>
-
-
    <div class="two-column-container11">
     <div class="left-column11">
       <h2>We empower children and youth to realize their full potential</h2>
@@ -53,10 +51,10 @@
     <h2>What We Do</h2>
   </div>
 
-  <section id="girls">
+  
   <div class="two-column-container33">
     <div class="left-column33">
-      <h3>Girls Dignity Program</h3>
+      <h3 class="dignity" id="girls" tabindex="-1">Girls Dignity Program</h3>
       <p>
        We distribute sanitary pads to girls in underserved communities, fostering confidence, 
        ensuring menstrual health, and supporting uninterrupted education, 
@@ -67,15 +65,15 @@
       <img src="class.jpeg" alt="dignity">
     </div>
   </div>
-</section>
 
-<section id="bag">
+
+
   <div class="two-column-container17">
     <div class="left-column17">
       <img src="teeam.jpeg" alt="Descriptive image">
     </div>
     <div class="right-column17">
-      <h3>A Bag for a Kid Initiative</h3>
+      <h3 id="bag" tabindex="-1">A Bag for a Kid Initiative</h3>
       <p>
         Our "Bag for a Kid" initiative aims to support school-going children 
         by providing them with backpacks. 
@@ -85,13 +83,12 @@
       </p>
     </div>
   </div>
-  </section>
+ 
 
 
-<section id="environment">
   <div class="two-column-container33">
     <div class="left-column33">
-      <h3>Environmental Care Awareness</h3>
+      <h3 id="environment" tabindex="-1">Environmental Care Awareness</h3>
       <p>
        Our environmental care awareness program educates communities about sustainable practices, 
        waste reduction, and the importance of protecting natural resources. We promote eco-friendly behaviors, 
@@ -100,18 +97,18 @@
       </p>
     </div>
     <div class="right-column34">
-      <img src="plant.jpeg" alt="dignity">
+      <img src="plant.jpeg" alt="environment">
     </div>
   </div>
-</section>
 
-<section id="elder">
+
+
   <div class="two-column-container17">
     <div class="left-column17">
-      <img src="care.jpeg" alt="Descriptive image">
+      <img src="care.jpeg" alt="elderly care">
     </div>
     <div class="right-column17">
-      <h3>Care for the Elderly</h3>
+      <h3 id="elder" tabindex="-1">Care for the Elderly</h3>
       <p>
        Our care for the elderly initiative focuses on providing support, companionship, 
        and healthcare resources to senior citizens. We ensure they receive the care and respect they deserve, 
@@ -120,13 +117,25 @@
       </p>
     </div>
   </div>
-  </section>
+ 
 
 
   <div class="CTA">
     <H2 class="diff">JOIN US IN MAKING A DIFFERENCE</H2>
     <P class="lets">Be a part of our mission and help empower lives—your support can create lasting change today!</P>
-    <BTn class="bttn">DONATE</BTn>
+    <div class="paypal-button">
+      <form action="https://www.paypal.com/donate" method="post" target="_blank">
+        <input type="hidden" name="business" value="your-paypal-email@example.com" />
+        <input type="hidden" name="no_recurring" value="0" />
+        <input type="hidden" name="item_name" value="Support our community and education programs" />
+        <input type="hidden" name="currency_code" value="USD" />
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif"
+               border="0" name="submit" title="Donate with PayPal"
+               alt="Donate with PayPal button" />
+        <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif"
+             width="1" height="1" />
+      </form>
+    </div>
   </div>
 
 
@@ -175,9 +184,6 @@
             <div class="copyright">
                         &copy; 2025 Chaperones Foundation. All Rights Reserved.
             </div>
-
-
-
 
 
 

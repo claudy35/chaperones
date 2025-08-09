@@ -66,6 +66,17 @@
     }
 
 
+    /* If you have a sticky header, ensure the anchored title isn’t hidden */
+h1, h2, h3 {
+  scroll-margin-top: 100px; /* match your sticky header height */
+}
+
+
+
+
+
+
+
     /* Hero Section Styling */
     .hero {
       width: 100%;
@@ -730,6 +741,11 @@ text-align: center;}
       }
     }
 
+    
+
+
+
+
     .wedo1{
       align-items: center;
       border-top: 1px solid black;
@@ -746,11 +762,11 @@ text-align: center;}
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      justify-content: space-between;
-      padding: 40px;
+      justify-content: center;
+      padding: 1rem;
       max-width: 1200px;
       margin: 0 auto;
-      gap: 40px;
+      gap: 1.25rem;
     }
 
     .left-column33 {
@@ -781,7 +797,26 @@ text-align: center;}
       object-fit: cover;
     }
 
+    @media (max-width: 768px) {
+  .two-column-container33 {
+    flex-direction: column;
+    text-align: center;               /* center headings and paragraph text */
+  }
+  .left-column33, .right-column33 {
+    width: 100%;
+  }
+  .right-column33 img {
+    margin: 0 auto; 
+    width: 100%;                  /* center the image */
+  }
+}
+
+
+
+
     .right-column34 img {
+      display: block;
+      width: 100%;
       width: 500px;
       height: 300px;
       border-radius: 8px;
@@ -812,11 +847,40 @@ text-align: center;}
 
       .left-column33, .right-column34 {
         flex: 1 1 100%;
-      }}
-
-
-      
+      }}      
     }
+
+
+    @media (max-width: 768px) {
+      .two-column-container33 {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+      }
+
+      .left-column33, .right-column34 {
+        flex: 1 1 100%;
+      }
+
+      .right-column34 img{
+        margin: 0 auto; 
+        width: 100%; 
+        max-width: 500px;
+        aspect-ratio: 5/3;
+        
+        
+      }
+    
+    
+    }      
+    
+
+
+
+
+
+
+
 
 
     .two-column-container17 {
@@ -826,8 +890,8 @@ text-align: center;}
       justify-content: space-between;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 40px;
-      gap: 40px;
+      padding: 1rem;
+      gap: 1.25rem;
     }
 
     .left-column17 {
@@ -859,13 +923,26 @@ text-align: center;}
 
     @media (max-width: 768px) {
       .two-column-container17 {
+        display: flex;
         flex-direction: column;
         text-align: center;
+        width: 100%;
+        
       }
 
       .left-column17, .right-column17 {
         flex: 1 1 100%;
       }
+
+
+      .right-column17 { order: 1; width: 100%; }
+  .left-column17  { order: 2; width: 100%; }
+
+  .left-column17 img{
+     margin: 0 auto; 
+    width: 100%;
+    
+  }
     }
 
             
@@ -923,8 +1000,23 @@ text-align: center;}
     @media (max-width: 600px) {
       .contact-container {
         padding: 20px;
-      }
+      }  
+
+
     }
+
+    @media (max-width: 600px) {
+  .contact-form button {
+    display: block;         /* take full line so margins apply */
+    margin: 16px auto 0;    /* auto left/right centers it */
+    width: fit-content;     /* keep natural width (optional) */
+    text-align: center;     /* just in case of multiline text */
+  }
+}
+
+
+
+
 
 
     .contact-section {
@@ -953,19 +1045,42 @@ text-align: center;}
 
     .map-container iframe {
       width: 100%;
-      height: 100%;
+      height: 250px;
       border: 0;
     }
 
+  
     @media (max-width: 768px) {
-      .contact-section {
-        flex-direction: column;
-      }
+  .contact-section {
+    flex-direction: column;  /* stack */
+    align-items: center;     /* center block items */
+    text-align: center;      /* center text */
+    gap: 24px;               /* tidy spacing (optional) */
+  }
 
-      .map-container {
-        height: 300px;
-      }
-    }
+  .contact-details,
+  .map-container {
+    width: 100%;
+    max-width: 700px;        /* keeps content readable */
+    margin: 0 auto;          /* center the blocks */
+  }
+
+  .map-container iframe {
+    display: block;
+    width: 100%;
+    height: 300px;           /* or use aspect-ratio if preferred */
+    margin: 0 auto;
+  }
+}
+
+
+
+
+
+
+
+
+
 
 
 
