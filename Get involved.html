@@ -25,6 +25,7 @@
       <a href="Programs.html">Programs</a>
       <a href="Get involved.html">Get Involved</a>
       <a href="Contact.html">Contact</a>
+      <a href="Get involved.html" class="dnt" style="color: white;">Donate</a> 
     </div>
     </div>
     <div class="overlay" id="overlay"></div>
@@ -43,7 +44,49 @@
       Every donation, big or small, brings us closer to our mission of impact and inclusion.
     </p>
 
-  <div class="paypal-button">
+     <form id="donation-form" onsubmit="return false" novalidate>
+    <div class="row">
+      <div class="field">
+        <label for="donorName">Full name (optional)</label>
+        <input id="donorName" name="donorName" type="text" autocomplete="name" placeholder="Jane Doe" />
+      </div>
+      <div class="field">
+        <label for="email">Email (for receipt)</label>
+        <input id="email" name="email" type="email" autocomplete="email" placeholder="jane@example.org" />
+      </div>
+
+      <!-- USD-only amount -->
+      <div class="field" style="flex:1 1 200px">
+        <label for="amount">Amount (USD)</label>
+        <div class="input-with-prefix">
+          <span aria-hidden="true" style="color: #7a7a7a;">$</span>
+          <input id="amount" name="amount" type="number" inputmode="decimal" step="0.01" min="1" placeholder="e.g., 25.00" required />
+        </div>
+       <!-- <div class="help">All donations are processed in USD.</div>-->
+      </div>
+    </div>
+
+    <fieldset>
+      <legend style="color: #7a7a7a; font-size: 14px;">Choose a payment method</legend>
+      <div class="options" role="radiogroup">
+        <label class="pill">
+          <input type="radio" name="pm" value="paypal" checked />
+          <span>PayPal</span>
+        </label>
+        <label class="pill">
+          <input type="radio" name="pm" value="mpesa" />
+          <span>M-Pesa</span>
+        </label>
+        <label class="pill" title="Coming soon">
+          <input type="radio" name="pm" value="cashapp" />
+          <span>Cash App</span>
+        </label>
+      </div>
+
+      <!-- Panels -->
+      <div id="paypalPanel" class="panel" aria-live="polite">
+        <p><strong>PayPal:</strong> Click “Donate with PayPal” and complete checkout.</p>
+        <div class="paypal-button">
       <form action="https://www.paypal.com/donate" method="post" target="_blank">
         <input type="hidden" name="business" value="your-paypal-email@example.com" />
         <input type="hidden" name="no_recurring" value="0" />
@@ -56,6 +99,65 @@
              width="1" height="1" />
       </form>
     </div>
+
+      </div>
+
+      <div id="mpesaPanel" class="panel" hidden aria-live="polite">
+        <p><strong>M-Pesa:</strong> Send to the number below, then optionally email your receipt for acknowledgement.</p>
+        <p class="mono" style="font-size:18px">
+          M-Pesa Number: <strong id="mpesaNumber">+254720000000</strong>
+          <button type="button" id="copyMpesa" class="btn secondary" style="margin-left:10px">Copy</button>
+        </p>
+        <ol class="help" style="margin-left:18px">
+          <li>Open M-Pesa → Send Money.</li>
+          <li>Enter the number above and your amount.</li>
+          <li>Reference: <em>Your Name</em> or <em>“Donation”</em>.</li>
+        </ol>
+        <div class="help">Note: If using M-Pesa, your provider will convert from USD at their rate.</div>
+        <div class="actions">
+          <a id="emailAck" class="btn secondary" href="#">Email receipt (optional)</a>
+          <span id="copyStatus" class="help ok" role="status" aria-live="polite"></span>
+        </div>
+      </div>
+
+      <div id="cashappPanel" class="panel" hidden aria-live="polite">
+        <p><strong>Cash App:</strong> Coming soon. Thank you for your patience.</p>
+        <button class="btn warning" type="button" disabled>Cash App not yet available</button>
+      </div>
+    </fieldset>
+
+   <!-- <div class="note" style="color: #7a7a7a; font-size: 13px;">
+      By donating you consent to our processing your details to issue acknowledgements and comply with audit requirements.
+    </div>-->
+  </form>
+</div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <!--
+    <div class="paypal-button">
+      <form action="https://www.paypal.com/donate" method="post" target="_blank">
+        <input type="hidden" name="business" value="your-paypal-email@example.com" />
+        <input type="hidden" name="no_recurring" value="0" />
+        <input type="hidden" name="item_name" value="Support our community and education programs" />
+        <input type="hidden" name="currency_code" value="USD" />
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif"
+               border="0" name="submit" title="Donate with PayPal"
+               alt="Donate with PayPal button" />
+        <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif"
+             width="1" height="1" />
+      </form>
+    </div>
+
+    -->
+
      <p class="cta">Thank you for your generosity and belief in our mission.</p>
   </div>
 
